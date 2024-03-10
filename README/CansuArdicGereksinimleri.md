@@ -1,32 +1,28 @@
-#### Tarih Seçimi
- Kullanıcıların konaklama tarihlerini belirleyip rezervasyon yapabilmelerini sağlayan özellik.
+#### 1-Kategoriye göre şehir listeleme: Kullanıcıların belirli kategorilere göre şehirleri listeleyebilmesini sağlar, böylece seyahat planlarını yaparken ilgili kategorilere göre şehirleri karşılaştırabilirler.
 
-##### Misafir Seçimi
- Kullanıcıların kaç kişiyle seyahat edeceklerini ve kaç kişilik bir konaklama ihtiyaçları olduğunu belirleyebilmelerini sağlayan özellik.
+#### 2- Ev bilgisi görüntüleme: Kullanıcıların konaklama birimleriyle ilgili bilgileri görüntülemesine olanak tanır. Bu bilgiler, evin özellikleri, konumu, fiyatı, fotoğrafları gibi detayları içerebilir.
 
-##### Konum Seçimi
- Kullanıcıların seyahat edecekleri bölge veya şehri seçebilmelerini ve bu konumda bulunan konaklama seçeneklerini görebilmelerini sağlayan özellik.
+#### 3- Öneri gösterme: Kullanıcılara seyahat tercihlerine göre öneriler sunar. Örneğin, daha önce tercih ettikleri yerlere benzer destinasyonlar sunabilir.
 
-#### Giriş Yapma
- Kullanıcıların Airbnb hesaplarına giriş yaparak rezervasyon yapmaya veya ilan vermeye başlayabilmelerini sağlayan özellik.
+#### 4- Giriş yapma: Kullanıcıların hesaplarına erişim sağlamak için kimlik doğrulaması yapmalarını sağlar.
 
-#### Üye Olma
- Kullanıcıların Airbnb platformuna üye olup hesap oluşturarak konaklama rezervasyonları yapmaya veya kendi konaklama yerlerini kiralamaya başlayabilmelerini sağlayan özellik.
+#### 5- Üye olma: Kullanıcıların yeni hesaplar oluşturmasına olanak tanır. Bu, kullanıcıların platforma erişim ve rezervasyon yapabilmesi için gereklidir.
 
-#### Arama Yapma
- Kullanıcıların belirli kriterlere göre konaklama yerlerini arayabilmesini ve filtreleyebilmesini sağlayan özellik.
+#### 6- Arama yapma: Kullanıcıların belirli kriterlere göre konaklama birimlerini aramasını sağlar. Bu kriterler genellikle konum, fiyat, tarih aralığı gibi faktörleri içerir.
 
-#### Filtreleme
- Kullanıcıların arama sonuçlarını belirli özelliklere göre filtreleyerek istedikleri konaklama seçeneklerini daha kolay bulabilmelerini sağlayan özellik.
+#### 7- Filtreleme: Kullanıcıların arama sonuçlarını belirli ölçütlere göre filtrelemesine olanak tanır. Bu, kullanıcıların tercihlerine ve gereksinimlerine en uygun konaklama birimlerini bulmalarını sağlar.
 
-#### Ödeme Bilgilerini Girme
- Kullanıcıların rezervasyon yaparken ödeme yapmak için kredi kartı bilgilerini girip güvenli bir şekilde ödeme işlemlerini tamamlayabilmelerini sağlayan özellik.
+#### 8- Ödeme yapma: Kullanıcıların rezervasyonlarını onaylamak için ödeme yapmasını sağlar. Bu genellikle kredi kartı veya diğer online ödeme yöntemleriyle gerçekleştirilir.
 
-#### Favori Ekleme
- Kullanıcıların beğendikleri konaklama seçeneklerini favori listelerine ekleyerek daha sonra kolayca erişebilmelerini sağlayan özellik.
+#### 9- Favori ekleme: Kullanıcıların beğendikleri konaklama birimlerini favorilere eklemesine olanak tanır, böylece daha sonra kolayca erişebilirler.
 
-#### Sepete Ekleme
- Kullanıcıların beğendikleri konaklama seçeneklerini sepetlerine ekleyerek birlikte rezervasyon yapmak istedikleri konaklama yerlerini bir arada görebilmelerini sağlayan özellik.
+#### 10- Favori listesi görüntüleme: Kullanıcıların favori listelerindeki konaklama birimlerini görüntülemesine olanak tanır, böylece daha sonra rezervasyon yapmak veya karşılaştırmak için kullanabilirler.
+
+
+
+
+
+
 
 
 
