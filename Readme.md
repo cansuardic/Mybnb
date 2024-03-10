@@ -5,7 +5,7 @@ Kullanıcıların istedikleri filtrelemeleri yaparak kendilerine uygun ev-otel o
 
 
 ## Proje Kategorisi
-ev kiralama uygulaması
+Ev kiralama uygulaması
 
 
 ## Referans Uygulama
