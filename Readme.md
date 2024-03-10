@@ -30,4 +30,4 @@ Cansu Ardıç
 6. [Front-End](/README/Front-End.md)
 7. [Back-End](/README/Backend.md)
 8. [Test](/README/Test.md)
-9. [Geliştirici ve Kullanıcı Dokümantasyonları](README/GeliştiriciveKullaniciDokümantasyonu.md)
+9. [Geliştirici ve Kullanıcı Dokümantasyonları](/README/GeliştiriciveKullaniciDokümantasyonu.md)
