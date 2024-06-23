@@ -2,9 +2,11 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import AboutPage from './pages/AboutPage';
+import SigninPage from './pages/SigninPage';
 import HomePage from './pages/HomePage'; 
 import NotFoundPage from './pages/NotFoundPage';
+import PropertyPage from './pages/PropertyPage'; // Yeni PropertyPage bileşeni
+
 
 function App() {
   return (
@@ -12,9 +14,10 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route exact path="/" component={HomePage} /> {/* 'HomPage' olarak düzeltildi */}
-        <Route path="/about" component={AboutPage} />
-        <Route component={NotFoundPage} /> {/* 404 sayfası */}
+        <Route exact path="/" element={<HomePage />} /> 
+        <Route path="/signin" element={<SigninPage/>} />
+        <Route path="*" element ={<NotFoundPage/>} /> {/* 404 sayfası */}
+        <Route path="/property/:id" element={<PropertyPage />} /> {/* Yeni rota */}
       </Routes>
 
       {/* Footer */}

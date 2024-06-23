@@ -2,8 +2,21 @@ import React from "react";
 import logo from "../assets/logo1.png";
 import { BiWorld, BiUser } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const onSigninClick = () => {
+    navigate('/signin');
+  };
+
+
+
+  
+
+
   return (
     <div className="border-b sticky top-0 z-50 bg-white/[95%]  ">
       <div className="flex justify-between items-center sm:mx-6 md:mx-10 lg:mx-12 ">
@@ -35,7 +48,7 @@ const Navbar = () => {
             <div className="">EN</div>
           </div>
 
-          <div className="flex items-center border px-3 py-2 rounded-full gap-2 bg-[#ff5a60] text-white font-bold shadow-lg shadow-gray-300 hover:bg-[#f9787c] duration-100 ease-out">
+          <div onClick={onSigninClick} className="flex items-center border px-3 py-2 rounded-full gap-2 bg-[#ff5a60] text-white font-bold shadow-lg shadow-gray-300 hover:bg-[#f9787c] duration-100 ease-out">
             <p>Sign in</p>
             <BiUser className="text-[22px]" />
           </div>
