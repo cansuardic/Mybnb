@@ -1,19 +1,21 @@
-import Filters from "./components/Filters";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Rentals from "./components/Rentals";
+import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage'; 
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
-    <div className="">
-      {/* Navbar */}
+    <div>
       <Navbar />
-      {/* Filters */}
-      <div className="sm:mx-6 md:mx-10 lg:mx-12 px-3">
-        <Filters />
-        {/* Rentals */}
-        <Rentals />
-      </div>
+
+      <Routes>
+        <Route exact path="/" component={HomePage} /> {/* 'HomPage' olarak düzeltildi */}
+        <Route path="/about" component={AboutPage} />
+        <Route component={NotFoundPage} /> {/* 404 sayfası */}
+      </Routes>
 
       {/* Footer */}
       <Footer />
