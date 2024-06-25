@@ -7,26 +7,28 @@ import house4 from "../assets/house4.jpg";
 import house5 from "../assets/house5.jpg";
 import Rental from "./Rental";
 
+export const rentals = [
+  { id: 1, title: "Texas, USA", image: house1, price: "1,541" },
+  { id: 2, title: "Texas, USA", image: house2, price: "1,541" },
+  { id: 3, title: "Texas, USA", image: house3, price: "1,541" },
+  { id: 4, title: "Texas, USA", image: house4, price: "1,541" },
+  { id: 5, title: "Texas, USA", image: house5, price: "1,541" },
+  { id: 6, title: "Texas, USA", image: house1, price: "1,541" },
+  { id: 7, title: "Texas, USA", image: house2, price: "1,541" },
+  { id: 8, title: "Texas, USA", image: house3, price: "1,541" },
+  { id: 9, title: "Texas, USA", image: house4, price: "1,541" },
+  { id: 10, title: "Texas, USA", image: house5, price: "1,541" },
+  { id: 11, title: "Texas, USA", image: house1, price: "1,541" },
+  { id: 12, title: "Texas, USA", image: house2, price: "1,541" },
+  { id: 13, title: "Texas, USA", image: house3, price: "1,541" },
+  { id: 14, title: "Texas, USA", image: house4, price: "1,541" },
+  { id: 15, title: "Texas, USA", image: house5, price: "1,541" },
+];
+
 const Rentals = () => {
   const navigate = useNavigate();
 
-  const rentals = [
-    { id: 1, title: "Texas, USA", image: house1, price: "1,541" },
-    { id: 2, title: "Texas, USA", image: house2, price: "1,541" },
-    { id: 3, title: "Texas, USA", image: house3, price: "1,541" },
-    { id: 4, title: "Texas, USA", image: house4, price: "1,541" },
-    { id: 5, title: "Texas, USA", image: house5, price: "1,541" },
-    { id: 6, title: "Texas, USA", image: house1, price: "1,541" },
-    { id: 7, title: "Texas, USA", image: house2, price: "1,541" },
-    { id: 8, title: "Texas, USA", image: house3, price: "1,541" },
-    { id: 9, title: "Texas, USA", image: house4, price: "1,541" },
-    { id: 10, title: "Texas, USA", image: house5, price: "1,541" },
-    { id: 11, title: "Texas, USA", image: house1, price: "1,541" },
-    { id: 12, title: "Texas, USA", image: house2, price: "1,541" },
-    { id: 13, title: "Texas, USA", image: house3, price: "1,541" },
-    { id: 14, title: "Texas, USA", image: house4, price: "1,541" },
-    { id: 15, title: "Texas, USA", image: house5, price: "1,541" },
-  ];
+
 
   const handleRentalClick = (id) => {
     navigate(`/property/${id}`);
