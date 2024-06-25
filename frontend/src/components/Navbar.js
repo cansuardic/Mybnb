@@ -14,10 +14,7 @@ const Navbar = () => {
 
 
 
-  
-
-
-  return (
+ return (
     <div className="border-b sticky top-0 z-50 bg-white/[95%]  ">
       <div className="flex justify-between items-center sm:mx-6 md:mx-10 lg:mx-12 ">
         {/* Left */}
