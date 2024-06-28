@@ -1,27 +1,43 @@
-import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import SigninPage from './pages/SigninPage';
-import HomePage from './pages/HomePage';
-import PropertyPage from './pages/PropertyPage'; // Yeni PropertyPage bileşeni
-import FavoritesPage from './components/FavoritesPage'; // Yeni eklenen bileşen
-import RegisterPage from './pages/RegisterPage'; 
+import React, {useState} from "react";
+import "react-responsive-modal/styles.css";
+import {Route, Routes} from "react-router-dom";
+import FavoritesPage from "./components/FavoritesPage"; // Yeni eklenen bileşen
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import BookingsPage from "./pages/BookingsPage";
+import HomePage from "./pages/HomePage";
+import RegisterPage from "./pages/RegisterPage";
+import SigninPage from "./pages/SigninPage";
 
 function App() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = (value) => {
+    setSearchValue(value);
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar onSearch={handleSearch} />
 
       <Routes>
-        <Route exact path="/" element={<HomePage />} /> 
+        <Route
+          exact
+          path="/"
+          element={<HomePage searchValue={searchValue} />}
+        />
+        <Route
+          path="/favorites"
+          element={<FavoritesPage searchValue={searchValue} />}
+        />
+        <Route
+          path="/bookings"
+          element={<BookingsPage searchValue={searchValue} />}
+        />
         <Route path="/signin" element={<SigninPage />} />
-        <Route path="/property/:id" element={<PropertyPage />} /> {/* Yeni rota */}
-        <Route path="/favorites" element={<FavoritesPage />} /> {/* Yeni rota */}
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
