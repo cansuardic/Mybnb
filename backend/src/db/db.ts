@@ -2,7 +2,7 @@ import {Pool} from "pg";
 
 
  const pool = new Pool({
-  connectionString : process.env.POSTGRESQL_URL 
+  connectionString : process.env.POSTGRESQL_URL + "?ssl=true"
 });
  
 
