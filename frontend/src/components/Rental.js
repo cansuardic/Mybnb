@@ -159,11 +159,18 @@ const Rental = ({
               <p>
                 <strong>Description:</strong> {description}
               </p>
-              <button
-                onClick={onOpenBookingModal}
-                className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600">
-                Book Now
-              </button>
+
+
+              {
+                userData && (
+                  <button
+                  onClick={onOpenBookingModal}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600">
+                  Book Now
+                </button>
+                )
+              }
+            
             </div>
           </div>
         </div>
