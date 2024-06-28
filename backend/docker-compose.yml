@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: npm startBuild
+    command: npm start
     ports:
       - "3200:3200"
     depends_on:
