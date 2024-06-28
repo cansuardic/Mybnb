@@ -1,17 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { rentals } from "../components/Rentals";
 
 const PropertyPage = () => {
   const { id } = useParams();
 
-  // Bu örnekte sabit veriler kullanıyoruz, ancak gerçek bir uygulamada API'den veri çekmeniz gerekecek
-  const properties = [
-    { id: "1", name: "Ev 1", description: "Güzel bir ev." },
-    { id: "2", name: "Ev 2", description: "Harika bir ev." },
-    // Diğer evler
-  ];
+  
 
-  const property = properties.find((p) => p.id === id);
+  const property = rentals.find((p) => p.id == id);
+
+  console.log(property);
 
   if (!property) {
     return <div>Ev bulunamadı.</div>;
@@ -19,8 +17,15 @@ const PropertyPage = () => {
 
   return (
     <div>
-      <h1>{property.name}</h1>
-      <p>{property.description}</p>
+      <p>Ev Bilgileri
+      </p>
+      <h1>{property.title}</h1>
+      <img
+            src={property.image}
+            alt=""
+            className="w-full"
+          />
+      <p>{property.price}</p>
     </div>
   );
 };
