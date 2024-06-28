@@ -10,6 +10,8 @@ import paymentRouter from "./routes/payment";
 import propertiesRouter from "./routes/properties";
 import categoriesRouter from "./routes/categories";
 
+require('./db/dbInit')
+
 var cors = require("cors");
 
 const app = express();
@@ -19,6 +21,7 @@ app.use(express.json());
 
 app.use(cors());
 app.options("*", cors());
+
 
 app.get("/", (req, res) => {
   res.send("Hello from MyBnb!");
