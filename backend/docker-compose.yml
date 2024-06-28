@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mybnb
+      PGPORT: 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./src/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm startBuild
+    ports:
+      - "3200:3200"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
