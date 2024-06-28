@@ -1,19 +1,37 @@
-// src/components/FavoritesPage.js
-import React from 'react';
-import { AiOutlineHeart } from 'react-icons/ai';
+import axios from "axios";
+import React, {useEffect, useState} from "react";
 
-const FavoritesPage = () => {
+import Rentals from "../components/Rentals";
+import {favoritesUrl} from "../urls";
+
+const FavoritesPage = ({searchValue}) => {
+  const [favoritesData, setFavoritesData] = useState([]);
+
+  const getFavorites = () => {
+    const userId = JSON.parse(sessionStorage.getItem("mybnb-user")).user_id;
+    axios
+      .get(favoritesUrl + "/" + userId)
+      .then((response) => {
+        setFavoritesData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
+    getFavorites();
+  }, []);
+
+  const filteredData = favoritesData.filter((item) =>
+    item.property_name.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Favorites</h1>
-      <p>Favoriler buradadır benim favorim abişim canım abim backendde kolaylıklar dilerim</p>
-      <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}>
-        <AiOutlineHeart size={50} color="red" />
-      </div>
+    <div className="sm:mx-6 md:mx-10 lg:mx-12 px-3">
+      <Rentals rentalData={filteredData} />
     </div>
   );
 };
 
 export default FavoritesPage;
-
-
