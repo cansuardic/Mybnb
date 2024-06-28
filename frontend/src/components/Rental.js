@@ -23,6 +23,8 @@ const Rental = ({
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
+  const [userData, setUserData] = useState(null);
+
 
   const location = useLocation();
 
@@ -31,6 +33,29 @@ const Rental = ({
 
   const onOpenBookingModal = () => setBookingModalOpen(true);
   const onCloseBookingModal = () => setBookingModalOpen(false);
+
+
+  useEffect(() => {
+    const updateUserFromSessionStorage = () => {
+      const user = JSON.parse(sessionStorage.getItem("mybnb-user"));
+      if (user) {
+        setUserData(user);
+      } else {
+        setUserData(null); // Eğer kullanıcı session'dan silinmişse null yap
+      }
+    };
+
+    // İlk render'da çalışır
+    updateUserFromSessionStorage();
+
+    // sessionStorage'deki değişiklikleri izler
+    window.addEventListener("storage", updateUserFromSessionStorage);
+
+    // useEffect temizleyicisi, component unmount olduğunda event listener'ı kaldırır
+    return () => {
+      window.removeEventListener("storage", updateUserFromSessionStorage);
+    };
+  }, []);
 
   const handlePaymentAndBooking = () => {
     const userId = JSON.parse(sessionStorage.getItem("mybnb-user")).user_id;
