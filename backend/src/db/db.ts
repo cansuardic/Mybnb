@@ -2,7 +2,11 @@ import {Pool} from "pg";
 
 
  const pool = new Pool({
-  connectionString : process.env.POSTGRESQL_URL + "?ssl=true"
+  user: "postgres",
+  host: "db",
+  database: "mybnb",
+  password: "postgres",
+  port: 5431,
 });
  
 
