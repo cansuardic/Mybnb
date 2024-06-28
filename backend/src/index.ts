@@ -9,6 +9,7 @@ import favoritesRouter from "./routes/favorites";
 import paymentRouter from "./routes/payment";
 import propertiesRouter from "./routes/properties";
 import categoriesRouter from "./routes/categories";
+import { runInitScript } from "./db/dbInit";
 
 require('./db/dbInit')
 
@@ -49,4 +50,6 @@ app.use("/categories", categoriesRouter);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
+
+  runInitScript();
 });

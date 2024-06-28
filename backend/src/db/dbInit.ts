@@ -5,7 +5,7 @@ const {Pool} = require('pg');
 const initPath =  path.join(__dirname, 'init.sql');
 const initScript =  fs.readFileSync(initPath, 'utf-8');
 
-async function runInitScript(){
+export const runInitScript = async () => {
     const pool = new Pool({
         connectionString : process.env.POSTGRESQL_URL + "?ssl=true"
       });
@@ -20,4 +20,3 @@ async function runInitScript(){
     }
 }
 
-runInitScript().catch(err => console.error("Error running initialization script", err));
