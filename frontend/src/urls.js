@@ -1,4 +1,4 @@
-const baseurl = "http://localhost:3200";
+const baseurl = "https://mybnb-txjd.onrender.com";
 
 export const propertiesUrl = baseurl + "/properties";
 export const categoriesUrl = baseurl + "/categories";
